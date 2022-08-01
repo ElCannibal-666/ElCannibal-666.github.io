@@ -173,11 +173,65 @@ body {
 
 .knowledge_paragraph {
     line-height: 1.7;
-    white-space: pre-wrap;
+    white-space: normal;
     margin-bottom: 15px;
 }
 
 .knowledge.img {
     width: 100%;
     display: block;
+}
+
+/*Works*/
+
+.works {
+    background-color: #e5e5f7;
+}
+
+.works_container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.works_body {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.works_body--show {
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.works_img {
+    width: 400px;
+    height: 400px;
+    border-radius: 3%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.works_texts {
+    max-width: 700px;
+}
+
+.works-testimony {
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.works_arrow {
+    width: 90%;
+    cursor: pointer;
 }
